@@ -1,0 +1,6 @@
+order date: 2022-05-10 15:22:32.785351, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 15:23:09.091431, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 16:31:36.486540, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 16:32:28.609128, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 16:59:46.510615, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 17:00:49.014834, from DK, Number: 20, Price: 150, Total price: 3750.0

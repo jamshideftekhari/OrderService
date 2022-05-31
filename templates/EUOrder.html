@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SprintTR</title>
+    <style>
+       table, th, td {
+           border: 1px solid black;
+           }
+        table.center {
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="align-self: center">Order Data from CSV</h1>
+
+<!-- <img src="images/averageDirection.png">
+<img src="{{url_for('static', filename = 'images/averageDirection.png')}}"> -->
+
+<table class="center">
+    <thead><tr><th>Timestamp</th><th>Country</th><th>Number</th><th>Price</th><th>Total Price</th><th>Discount</th><th>Price with discount</th></tr></thead>
+    <tbody>
+        {% for order in orders%}
+           <tr>
+               <td>{{order.TimeStamp}}</td>
+               <td style="text-align: center;">{{order.Country}}</td>
+               <td style="text-align: center;">{{order.Number}}</td>
+               <td style="text-align: center;">{{order.Price}}</td>
+               <td style="text-align: center;">{{order.TotalPrice}}</td>
+               <td style="text-align: center;">{{order.Discount}}</td>
+               <td style="text-align: center;">{{order.DiscountPrice}}</td>
+           </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p style="align-self: center; background-color: darkgray"> <h2 style="align-self: center">Add Order</h2>
+<form action="{{ '/AddOrder' }}" method="post" style="text-align: center">
+    <label>Item Number:</label>
+    <input type="text" id="number" name="number" value="">
+    <label>Item Price:</label>
+    <input type="text" id="price" name="price" value="">
+    <label>Country Code:</label>
+    <input type="text" id="country" name="country" value="">
+    <input type="submit" value="Add Order">
+</form>
+<br><br>
+</p>
+<p style="text-align: center">  <h2 style="align-self: center">Remove order</h2>
+<form action="{{ '/RemoveOrder' }}" method="post" style="text-align: center">
+        <label>Order index:</label>
+    <input type="text" id="index" name="index" value="">
+    <input type="submit" value="Delete index number">
+</form>
+</p>
+
+<p>
+    <h2> orders price from countries</h2>
+    <img src="{{url_for('static', filename = 'images/ordersBarChart.png')}}">
+</p>
+
+</body>
+</html>

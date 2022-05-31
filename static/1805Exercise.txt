@@ -1,0 +1,87 @@
+# working with user interface using catalog, repository objects.
+# we will use flask/browser to implement UI
+# we will start with active server pages.
+
+# Exe 1 :
+# present csv file data in a new browser window. you need to add EUOrder.html under static folder
+# Read and understand the html code (HTML + Python) -- discussion in plenum -- Form/post Table/Get
+
+# generate order list from csv
+# You need to read content of CSV, and generate list of EUOrders objects.
+# here is an example of python code (method) which can be added to repository.
+# How this code works? Do you have better proposal for solution?
+
+def ReadOrderListFromCSV(self, orders):
+    with self.staticCsvPath.open(mode="r", encoding="utf-8") as ordercsv:
+        reader = csv.reader(ordercsv)
+        for row in reader:
+            csvorder = EUOrder(row[0], row[1], int(row[2]), float(row[3]))
+            orders.append(csvorder)
+
+
+# App service has dependency to EUOrderCatalog for getting access to data.
+# To receive data (object list) from csv file we need to add a method to the EUOrderCatalog to call above service
+# How to implement this method? Parameters, Return values?
+# Here is an example. Is there other options?
+
+def ReadToOrderListFromCSV(self):
+        self.Repo.ReadOrderListFromCSV(self.OrderCatalog)
+        return self.OrderCatalog
+
+
+# And here is methods in the app service to handle get og post -- discussion i plenum
+
+
+@app.route('/EUOrders')
+def EUOrders():
+    catalog = EUOrderCataloge()
+    return render_template("EUOrder.html", orders=catalog.ReadToOrderListFromCSV())
+
+
+@app.route('/AddOrder', methods=['Post'])
+def AddOrder():
+    order = EUOrder(datetime.now(), request.form['country'], int(request.form['number']), float(request.form['price']))
+    catalog = EUOrderCataloge()
+    catalog.ReadToOrderListFromCSV()
+    catalog.AddOrder(order)
+    catalog.SaveToCsv()
+    # return render_template("EUOrder.html", orders=catalog.ReadToOrderListFromCSV())
+    return redirect(url_for('EUOrders'))
+
+# try to test services and find errors
+# what happens if you send empty form - How to fix it?
+# proposal for improvements from user point of view.
+# How to implement proposals
+# How to remove/Edit an order?
+# Search, Sort?
+
+# Remove Example - add to your code - make the catalog method for remove (if you don't have it).
+# test, try to crash program
+# fix the problem
+
+@app.route('/RemoveOrder', methods=['Post'])
+def RemoveOrder():
+    index = int(request.form['index'])
+    catalog = EUOrderCataloge()
+    catalog.ReadToOrderListFromCSV()
+    catalog.RemoveOrder(index)
+    catalog.SaveToCsv()
+    return redirect(url_for('EUOrders'))
+
+
+# Modern web applications build the markup/formatting in the client side(browser)
+# that means receiving only data from server(API) Typically in Jason format
+# here is an example.
+# add this example in your app service and try -- Discussion in plenum
+
+@app.route('/EUOrdersJason')
+def EuOrdersJason():
+    catalog = EUOrderCataloge()
+    orderList = catalog.ReadToOrderListFromCSV()
+    objectJasonList = []
+    for order in orderList:
+        objectJasonList.append(order.__dict__)
+    return jsonify(objectJasonList)
+
+# jason deserialisation
+# Data as jason in files and databases.

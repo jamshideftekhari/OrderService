@@ -1,0 +1,33 @@
+order date: 2022-05-10 15:22:32.785351, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 15:23:09.091431, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 16:31:36.486540, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 16:32:28.609128, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 16:59:46.510615, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-10 17:00:49.014834, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-11 19:27:56.953214, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-11 19:28:25.651482, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 10:57:10.881879, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:00:52.345030, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:20:04.946798, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:20:09.540644, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:20:31.366992, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:21:08.307748, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:21:13.662344, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:21:24.245006, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:22:32.230547, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:28:32.023788, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:28:54.020571, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:29:13.013144, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:30:03.592929, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:30:26.087133, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:30:40.032033, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 11:36:11.156411, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-20 12:41:38.249181, from DK, Number: 20, Price: 150, Total price: 3750.0
+order date: 2022-05-22 20:35:18.343264, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-22 20:36:41.279579, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-22 20:45:00.616301, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-22 20:48:36.475684, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-22 21:04:02.985090, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-23 09:43:14.562724, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-23 09:57:52.095183, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
+order date: 2022-05-23 17:02:40.105396, from DK, Number: 20, Price: 150, Total price: 3750.0, Discount: 112.5, Price with Discount: 3637.5
