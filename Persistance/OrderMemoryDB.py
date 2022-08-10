@@ -1,5 +1,6 @@
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timedelta
+from Models.EUOrder import EUOrder
 
 
 class OrderDB:
@@ -14,7 +15,17 @@ class OrderDB:
         self.Cursor.execute("INSERT INTO OrderTable VALUES (?, ?, ?, ?)", (order.TimeStamp, order.Country, order.Number, order.Price))
 
     def InsertTestOrder(self):
-        self.Cursor.execute("INSERT INTO OrderTable VALUES ('30-05-2022','DK','25','100')")
+        testOrder = EUOrder(datetime.now(), 'DK', 25, 100)
+        self.InsertOrder(testOrder)
+        for i in range(6):
+            testOrder = EUOrder(datetime.now() - timedelta(days=i * 1), 'DK', 25*i, 100+i)
+            self.InsertOrder(testOrder)
+        #self.Cursor.execute("INSERT INTO OrderTable VALUES ('30-05-2022','DK','25','100')")
 
     def GetTableData(self):
         return self.Cursor.execute("SELECT * FROM OrderTable")
+
+    def GetOrderByDate(self, start, stop):
+        if not stop:
+            stop = datetime.now()
+        return self.Cursor.execute("SELECT * FROM OrderTable WHERE OrderTimeStamp > ? AND OrderTimeStamp < ? ", (start, stop))
